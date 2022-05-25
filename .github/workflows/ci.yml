@@ -6,14 +6,14 @@ on:
       - main
 
 jobs:
-  deploy:
+  ci:
     runs-on: ubuntu-latest
     steps:
       -
         name: Checkout
         uses: actions/checkout@v3
       -
-        name: Dagger
+        name: Dagger test
         uses: dagger/dagger-for-github@v3
         with:
           cmds: |
